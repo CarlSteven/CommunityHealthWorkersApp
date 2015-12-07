@@ -1,15 +1,19 @@
 <ui-view title="Community Health Workers App">
-    <button class="button button-icon fa fa-chevron-left" ui-sref="home.homePage">Back to Home</button>
-    <div class="list list-inset">
-        <form class="submit" ng-submit="submit()">
-            <label class="item item-input">
-                <input type="text" ng-model="$parent.userName" placeholder="USERNAME">
-            </label>
-            <label class="item item-input">
-                <input type="password" ng-model="$parent.passWord" placeholder="PASSWORD">
-            </label>
-            <button type="submit" class="button button-block button-dark submit">Submit</button>
-        </form>
+    <div class="body">
+        <button class="button button-icon fa fa-chevron-left" ui-sref="home.homePage">Back to Home</button>
+        <div class="list list-inset">
+            <form class="submit" ng-submit="submit()">
+                <label class="item item-input">
+                    <input type="text" ng-model="$parent.userName" placeholder="USERNAME">
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model="$parent.passWord" placeholder="PASSWORD">
+                </label>
+                <button type="submit" class="button button-block button-dark submit">Submit</button>
+            </form>
+        </div>
+        <a class="button button-icon" ui-sref="register">REGISTER HERE</a>
+        
     </div>
-    <a class="button button-icon" ui-sref="register">REGISTER HERE</a>
+
 </ui-view>

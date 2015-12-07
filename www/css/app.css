@@ -120,6 +120,7 @@ ul.nav a:hover {background: #E8E8E8 !important;color: #229955 !important;}
     padding-left: 0;
     margin-bottom: 20px;
     overflow-x: hidden;
+    cursor: pointer;
 }
 /*.checkbox input, .checkbox-icon {
     position: relative;
@@ -344,7 +345,10 @@ a.item {
 }
 
 /* collapsed sidebar styles */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
+    #myCarousel {
+        display: none;
+    }
     .nav>li>a {
         font-size: 14px;
         padding-left: 3px;
@@ -399,7 +403,20 @@ a.item {
     width:  100%;
   }
 }
-@media screen and (min-width: 959px) {
+@media screen and (min-width: 960px) {
+    .body {
+        margin-top: 264px !important;
+    }
+    .navbar-default {
+        top: 200px !important;
+    }
+    #myCarousel {
+        display: block;
+        height:200px;
+    }
+    .searchbar {
+        top: 250px !important;
+    }
     .searchbar>input {
         width: 100%;
     }
@@ -426,6 +443,16 @@ a.item {
     overflow-x: scroll;
     overflow-y:hidden;
 }
+#myCarousel{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /*for modals*/
 /*.item-select select {
     position: relative !important;

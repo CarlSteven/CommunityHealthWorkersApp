@@ -14,3 +14,8 @@ $( window ).resize(function() {
 	$('.overlay').removeClass('active');
 	$('body').removeClass('sidebar')
 });
+// $('#myCarousel').carousel({
+//     // interval: 1000
+// }); 
+
+// $("#myCarousel").carousel();

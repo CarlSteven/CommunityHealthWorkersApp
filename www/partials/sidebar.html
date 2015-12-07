@@ -1,15 +1,17 @@
-<!-- <div class="scroll-x"> -->
-<label class="item item-input item-select">
+<div style="">
+    <h4>Search Filter</h4>
+</div>
+<label class="item item-input item-select" data-toggle="tooltip" title="Date!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <div class="input-label">
         <i class="medal-popup fa fa-dot-circle-o fa-fw"></i> Date
     </div>
     <select ng-model="query.finished" ng-init="query.finished='0'">
-        <option value="1">Past</option>
-        <option value="0">Future</option>
+        <option value="1">Past Classes</option>
+        <option value="0">Upcomming Classes</option>
         <option value="">Both</option>
     </select>
 </label>
-<label class="item item-input item-select" ng-show="isAdm || isMod">
+<label class="item item-input item-select" ng-show="isAdm || isMod" ng-init="query.active='1'" data-toggle="tooltip" title="Active!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <div class="input-label">
         <i class="medal-popup fa fa-check-circle-o fa-fw"></i> Active
     </div>
@@ -19,27 +21,27 @@
         <option value="">Both</option>
     </select>
 </label>
-<label class="item item-input item-select">
+<label class="item item-input item-select" data-toggle="tooltip" title="Audience!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <div class="input-label">
-        <i class="medal-popup fa fa-graduation-cap fa-fw"></i> Instructor
+        <i class="medal-popup fa fa-graduation-cap fa-fw"></i> Audience
     </div>
     <select ng-model="query.forCHW">
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-        <option value="">Both</option>
+        <option value="1">Instructor</option>
+        <option value="0">Community Health Workers</option>
+        <option value="">Everyone</option>
     </select>
 </label>
-<label class="item item-input item-select">
-    <div class="input-label">
+<label class="item item-input item-select" data-toggle="tooltip" title="Credit!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+    <div class="input-label" >
         <i class="medal-popup fa fa-certificate fa-fw"></i> Credit
     </div>
     <select ng-model="query.forCredit">
-        <option value="1">Credit</option>
+        <option value="1">CHW CEU Credit</option>
         <option value="0">No Credit</option>
         <option value="">Both</option>
     </select>
 </label>
-<label class="item item-input">
+<label class="item item-input" data-toggle="tooltip" title="Cores!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <div class="input-label">
         <i class="medal-popup fa fa-list fa-fw"></i> Cores
     </div>

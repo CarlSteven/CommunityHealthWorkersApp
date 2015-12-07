@@ -16,8 +16,8 @@
             <div class="dropdown">
                 <a class="dropdown-toggle" id="expiration" role="button" data-toggle="dropdown">
                     <div class="input-group">
-                        <input size="16" value="{{newTask.time | date:'MM-dd-yyyy hh:mm a'}}" id="class_time"
-                               type="text">
+                        <!-- <input size="16" value="{{newTask.time | date:'MM-dd-yyyy hh:mm a'}}" id="class_time" type="text"> -->
+                        <input style="width:100%" value="{{newTask.time | date:'MM-dd-yyyy hh:mm a'}}" id="class_time" type="text">
                         <!-- class="form-control" -->
                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                     </div>

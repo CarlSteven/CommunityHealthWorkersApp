@@ -71,8 +71,19 @@
 </head>
 
 <body id="background" class="background" ng-controller="menuCtrl">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class=" active">
+              <img style="width:100%; min-height:200px;" src="img/slider/collage1.jpg">
+            </div>
+
+            <div class="">
+              <img style="width:100%; min-height:200px;" src="img/slider/collage2.jpg">
+            </div>
+        </div>
+    </div>
 <ui-view id="disappear_on_mobile" class="desktop_header" name="header"></ui-view>
-<ui-view class="whole_app" name="app"></ui-view>
+<ui-view class="whole_app" name="app" style:"top:200"></ui-view>
 <div id="loader-wrapper">
     <div id="loader"></div>
 </div>
