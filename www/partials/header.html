@@ -22,7 +22,6 @@
                 <li ui-sref-active="active" ng-if="!isGuest && !isAdm && !isMan"><a ui-sref="home.myTasks">My
                     WishList</a></li>
                 <li ui-sref-active="active"><a ui-sref="home.calendar">Calendar</a></li>
-                <li ui-sref-active="active" ng-if="!isGuest"><a ui-sref="home.settings">Settings</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Resources<span class="caret"></span></a>
@@ -50,6 +49,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <li ui-sref-active="active">
                     <a ui-sref="login" ng-show="isGuest">Login</a>
+                </li>
+                <li ui-sref-active="active" ng-controller="settings">
+                    <a ng-click="logOutUser()" ng-show="!isGuest">Logout, {{uin}}</a>
                 </li>
             </ul>
         </div>

@@ -103,13 +103,6 @@ config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
         },
         authenticate: true
     }).
-    state('home.settings', {
-        url: "/settings",
-        views: {
-            "app": {templateUrl: "partials/settings.html", controller: "settings"}
-        },
-        authenticate: true
-    }).
     state('home.calendar', {
         url: "/calendar",
         views: {
