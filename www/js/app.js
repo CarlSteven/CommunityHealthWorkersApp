@@ -25,8 +25,7 @@ config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
     state('home', {
         views: {
             "app": {templateUrl: "partials/home.html"},
-            "header@": {templateUrl: "partials/header.html"},
-            "bottomMenu": {templateUrl: "partials/bottomMenu.html", controller: "menuCtrl"}
+            "header@": {templateUrl: "partials/header.html", controller: "menuCtrl"}
         },
         authenticate: true
     }).
