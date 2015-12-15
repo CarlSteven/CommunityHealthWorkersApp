@@ -156,9 +156,9 @@ config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
 }).
 
 run(function (Restangular, $rootScope, Auth, $q, $state, vmaUserService, ngNotify) {
-    Restangular.setBaseUrl("https://hnetdev.hnet.uh.edu:8443/CombinedBackend/");
-    Restangular.setDefaultHeaders({"X-TenantId": "tenantCHW"});
-    //Restangular.setBaseUrl("https://www.housuggest.org:8443/CHWApp/");
+    Restangular.setBaseUrl("https://hnetdev.hnet.uh.edu:8443/CHWApp/");
+    //Restangular.setBaseUrl("https://hnetdev.hnet.uh.edu:8443/CombinedBackend/");
+    //Restangular.setDefaultHeaders({"X-TenantId": "tenantCHW"});
 
     //TO ACCESS RESTANGULAR IN CONTROLLERS WITHOUT INJECTION - THIS SHOULD BE REMOVED, NOT GOOD PRACTICE
     $rootScope.Restangular = function () {
