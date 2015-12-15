@@ -1,7 +1,9 @@
 <ui-view>
     <div class="list">
-        <div class="item"><b>Class Name:</b> {{task.name}}</div>
-        <div class="item item-text-wrap" ng-show="task.description"><b>Description: </b> {{task.description}} <span
+        <div class="item item-button-right">
+            <h1> {{task.name}}</h1>
+        </div>
+        <div class="item item-text-wrap" ng-show="task.description"><b>Description: </b><br> {{task.description}} <span
             class="item-note">{{badgeConfig[task.badge_id]}}</span></div>
         <div class="item" ng-hide="task.description"><b>Description: </b> No Description Available <span
             class="item-note">{{badgeConfig[task.badge_id]}}</span></div>

@@ -68,16 +68,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="modules/map/angular-adaptive-googlemaps.js"></script>
     <script src="lib/angular-csv-import-tmp/dist/angular-csv-import.min.js"></script>
+    <script type="text/javascript">
+        $('#myCarousel').carousel({
+            interval: 5000
+        }); 
+    </script>
 </head>
 
 <body id="background" class="background" ng-controller="menuCtrl">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
-            <div class=" active">
+            <div class="item active">
               <img style="width:100%; min-height:200px;" src="img/slider/collage1.jpg">
             </div>
-
-            <div class="">
+            <div class="item ">
               <img style="width:100%; min-height:200px;" src="img/slider/collage2.jpg">
             </div>
         </div>

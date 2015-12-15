@@ -2,6 +2,9 @@
     color: white;
     background-color: #229955;
 }
+.tooltip, .tooltip-arrow, .tooltip-head, .tooltip-inner {
+    z-index: 9000;
+}
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white ;
 }
@@ -26,6 +29,13 @@ ul.nav a:hover {background: #E8E8E8 !important;color: #229955 !important;}
 .item> h2{
     margin-top: 0px;
     font-size: 1.45em;
+}
+.description {
+    opacity: .5;
+}
+.carousel-inner> .item {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .item.tabs {
 /*    display: -webkit-box;
@@ -382,12 +392,12 @@ a.item {
     top: 140px;
     opacity: 0;
   }
-  .row-offcanvas-left.active>
+  .row-offcanvas-left.sideactive>
   .sidebar-offcanvas{
     opacity: 1;
     z-index:999 !important;
   }
-  .row-offcanvas-left.active {
+  .row-offcanvas-left.sideactive {
     left: 41.6%;
   }
   .sidebar-offcanvas {
@@ -676,7 +686,7 @@ button.button-block, button.button-full, .button-full > button.button, input.but
     position: fixed;
     background-color: rgba(0,0,0,.6);
 }
-.overlay.active {
+.overlay.sideactive {
     display: block !important;
 }
 body.sidebar {

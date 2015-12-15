@@ -1,15 +1,15 @@
 <ui-view>
     <script>
         $('.searchButton').click(function () {
-            $('.row-offcanvas').toggleClass('active');
-            $('.overlay').toggleClass('active');
+            $('.row-offcanvas').toggleClass('sideactive');
+            $('.overlay').toggleClass('sideactive');
             $('body').toggleClass('sidebar');
             // $('body').css('overflow', 'hidden');
             // $('.overlay').css({ 'display': "block" });
         });
         $('.overlay').click(function () {
-            $('.row-offcanvas').removeClass('active');
-            $('.overlay').removeClass('active');
+            $('.row-offcanvas').removeClass('sideactive');
+            $('.overlay').removeClass('sideactive');
             $('body').removeClass('sidebar')
             // $('.overlay').css({ 'display': "block" });
         });

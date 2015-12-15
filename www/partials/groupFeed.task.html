@@ -6,13 +6,13 @@
 
     <script>
         $('.searchButton').click(function () {
-            $('.row-offcanvas').toggleClass('active');
-            $('.overlay').toggleClass('active');
+            $('.row-offcanvas').toggleClass('sideactive');
+            $('.overlay').toggleClass('sideactive');
             $('body').toggleClass('sidebar');
         });
         $('.overlay').click(function () {
-            $('.row-offcanvas').removeClass('active');
-            $('.overlay').removeClass('active');
+            $('.row-offcanvas').removeClass('sideactive');
+            $('.overlay').removeClass('sideactive');
             $('body').removeClass('sidebar')
         });
     </script>
