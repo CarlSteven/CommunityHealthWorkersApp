@@ -1,15 +1,15 @@
 <script type="text/javascript">
-// $(document).ready(function(){
-//     $('[data-toggle="tooltip"]').tooltip({
-//         template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-head"><h3><span class="glyphicon glyphicon-info-sign"></span> Tooltip</h3></div><h4 class="tooltip-inner"></h4></div>'
-//     });   
-// });
+ $(document).ready(function(){
+     $('[data-toggle="tooltip"]').tooltip({
+         template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-head"></div><h5 class="tooltip-inner"></h5></div>'
+     });
+ });
 </script>
 
 <div style="">
-    <h4>Search Filter</h4>
+    <h4>Search Filters</h4>
 </div>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Date!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Date: This filter helps displaying classes that are already over or coming up in the future.">
     <div class="input-label">
         <i class="medal-popup fa fa-dot-circle-o fa-fw"></i> Date
     </div>
@@ -20,7 +20,7 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" ng-show="isAdm || isMod" ng-init="query.active='1'" data-toggle="tooltip" data-placement="bottom" title="Active!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+<label class="item item-input item-select" ng-show="isAdm || isMod" ng-init="query.active='1'" data-toggle="tooltip" data-placement="bottom" title="Active: Classes can be marked is active or inactive by a Training Center Manager which means users will not be able to see them.">
     <div class="input-label">
         <i class="medal-popup fa fa-check-circle-o fa-fw"></i> Active
     </div>
@@ -31,7 +31,7 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Audience!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Audience: Some classes are geared towards instructors, others for CHW.">
     <div class="input-label">
         <i class="medal-popup fa fa-graduation-cap fa-fw"></i> Audience
     </div>
@@ -42,7 +42,7 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Credit!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Credit: Some classes can be for CEU credit while others may not.">
     <div class="input-label" >
         <i class="medal-popup fa fa-certificate fa-fw"></i> Credit
     </div>
@@ -53,7 +53,7 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input" data-toggle="tooltip" data-placement="bottom" title="Cores!: Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+<label class="item item-input" data-toggle="tooltip" data-placement="bottom" title="Cores: Classes can fall in different categories, defined as Core Competencies.">
     <div class="input-label">
         <i class="medal-popup fa fa-list fa-fw"></i> Cores
     </div>
