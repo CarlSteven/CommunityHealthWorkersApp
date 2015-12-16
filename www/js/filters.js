@@ -86,7 +86,6 @@ vmaFilterModule.filter('convertToIndex', function () {//id=badgeconfig
 
 vmaFilterModule.filter('selectCores', function () { //array of what the user wants, and array have.COMPARE the two for similarities
     return function (classes, output) {
-        console.log(classes, output);
         var returnArray = [];
         if (output == null || classes == null || output.length == 0) {
             return classes;
