@@ -1,15 +1,16 @@
 <script type="text/javascript">
- $(document).ready(function(){
-     $('[data-toggle="tooltip"]').tooltip({
-         template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-head"></div><h5 class="tooltip-inner"></h5></div>'
-     });
- });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-head"></div><h5 class="tooltip-inner"></h5></div>'
+        });
+    });
 </script>
 
 <div style="">
     <h4>Search Filters</h4>
 </div>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Date: This filter helps displaying classes that are already over or coming up in the future.">
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom"
+       title="Date: This filter helps displaying classes that are already over or coming up in the future.">
     <div class="input-label">
         <i class="medal-popup fa fa-dot-circle-o fa-fw"></i> Date
     </div>
@@ -20,7 +21,9 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" ng-show="isAdm || isMod" ng-init="query.active='1'" data-toggle="tooltip" data-placement="bottom" title="Active: Classes can be marked is active or inactive by a Training Center Manager which means users will not be able to see them.">
+<label class="item item-input item-select" ng-show="isAdm || isMod" ng-init="query.active='1'" data-toggle="tooltip"
+       data-placement="bottom"
+       title="Active: Classes can be marked is active or inactive by a Training Center Manager which means users will not be able to see them.">
     <div class="input-label">
         <i class="medal-popup fa fa-check-circle-o fa-fw"></i> Active
     </div>
@@ -31,7 +34,8 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Audience: Some classes are geared towards instructors, others for CHW.">
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom"
+       title="Audience: Some classes are geared towards instructors, others for CHW.">
     <div class="input-label">
         <i class="medal-popup fa fa-graduation-cap fa-fw"></i> Audience
     </div>
@@ -42,8 +46,9 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom" title="Credit: Some classes can be for CEU credit while others may not.">
-    <div class="input-label" >
+<label class="item item-input item-select" data-toggle="tooltip" data-placement="bottom"
+       title="Credit: Some classes can be for CEU credit while others may not.">
+    <div class="input-label">
         <i class="medal-popup fa fa-certificate fa-fw"></i> Credit
     </div>
     <select ng-model="query.forCredit">
@@ -53,19 +58,20 @@
     </select>
     <div style="clear:both"></div>
 </label>
-<label class="item item-input" data-toggle="tooltip" data-placement="bottom" title="Cores: Classes can fall in different categories, defined as Core Competencies.">
+<label class="item item-input" data-toggle="tooltip" data-placement="bottom"
+       title="Cores: Classes can fall in different categories, defined as Core Competencies.">
     <div class="input-label">
         <i class="medal-popup fa fa-list fa-fw"></i> Cores
     </div>
-    <isteven-multi-select
-        input-model="badgeMultiSelect"
-        output-model="$parent.$parent.output"
-        button-label="" dummy
-        item-label="icon name maker"
-        tick-property="ticked"
-        orientation="horizontal"
-        helper-elements="all,none"
-        max-labels="0"
-    >
-    </isteven-multi-select>
 </label>
+<isteven-multi-select
+    input-model="badgeMultiSelect"
+    output-model="$parent.$parent.output"
+    button-label="" dummy
+    item-label="icon name maker"
+    tick-property="ticked"
+    orientation="horizontal"
+    helper-elements="all,none"
+    max-labels="0"
+>
+</isteven-multi-select>

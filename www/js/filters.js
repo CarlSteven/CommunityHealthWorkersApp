@@ -105,7 +105,6 @@ vmaFilterModule.filter('selectCores', function () { //array of what the user wan
                 returnArray.push(classes[i]);
             }
         }
-
         return returnArray;
     }
 });
