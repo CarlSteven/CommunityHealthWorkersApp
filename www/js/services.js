@@ -304,7 +304,7 @@ vmaServices.factory('vmaTaskService', function (Restangular, $q, $filter, vmaGro
             return this.updateTasks(true).then(function () {
                 var result = [];
                 allTasks.forEach(function (entry) {
-                    if (entry.time) {
+                    if (entry.time && entry.active == 1) {
                         var URL = "#/taskview/" + entry.id;
                         URL = encodeURI(URL);
                         result.push({"title": entry.name, "start": entry.time, "url": URL});

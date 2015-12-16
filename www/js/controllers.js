@@ -733,9 +733,8 @@ vmaControllerModule.controller('hoursController', function ($scope, $state, $sta
     };
 });
 
-vmaControllerModule.controller('calendar', function ($scope, $state, vmaTaskService) {
+vmaControllerModule.controller('calendar', function ($scope, $state, vmaTaskService, $filter) {
     //ACCESSES SERVER AND UPDATES THE LIST OF TASKS
-
     $scope.updateTasksAndDisplayCalendar = function () {
         vmaTaskService.getCalTasks($scope.id).then(function (success) {
             $scope.calTasks = success;
