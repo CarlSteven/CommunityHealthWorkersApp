@@ -748,9 +748,6 @@ vmaControllerModule.controller('calendar', function ($scope, $state, vmaTaskServ
 
 vmaControllerModule.controller('menuCtrl', function ($scope, $state) {
     $scope.state = $state;
-    $scope.goToLink = function (url) {
-        window.open(url, "blank");
-    }
 });
 
 vmaControllerModule.controller('homeCtrl', function ($scope, $state) {

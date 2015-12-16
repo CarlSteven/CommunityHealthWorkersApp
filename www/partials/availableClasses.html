@@ -17,7 +17,7 @@
         //     function () {
         //     $('.row-offcanvas').addClass('active');
         //     $('.overlay').css({ 'display': "block" });
-        //     }, 
+        //     },
         //     function () {
         //     $('.row-offcanvas').removeClass('active');
         //     $('.overlay').css({ 'display': "none" });
@@ -40,8 +40,11 @@
         </div>
         <!-- main area -->
         <div class="col-xs-12 col-sm-9 search-content">
+            <div style="text-align: center">
+                Displaying {{filtered.length}} of {{tasks.length}} classes based on search query and filters.
+            </div>
             <div class="list card my-item"
-                 ng-repeat="task in tasks | orderBy: 'time' | filter: query | selectCores: indexCoresInput">
+                 ng-repeat="task in filtered = (tasks | orderBy: 'time' | filter: query | selectCores: indexCoresInput)">
                 <div class="item item-avatar item-icon-right" ng-click="viewTask(task.id)">
                     <img src="img/classes-icon.png"/>
 

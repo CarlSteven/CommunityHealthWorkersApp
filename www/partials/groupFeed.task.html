@@ -44,8 +44,11 @@
                     This location doesn't seem to have any classes...
                 </div>
             </div>
+            <div style="text-align: center">
+                Displaying {{filtered.length}} of {{tasks.length}} classes based on search query and filters.
+            </div>
             <div class="list card"
-                 ng-repeat="task in tasks | orderBy: 'time' | filter: query | selectCores: indexCoresInput">
+                 ng-repeat="task in filtered = (tasks | orderBy: 'time' | filter: query | selectCores: indexCoresInput)">
                 <div class="item item-avatar item-icon-right" ng-click="viewTask(task.id)">
                     <img src="img/classes-icon.png"/>
 
