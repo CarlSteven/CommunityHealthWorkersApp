@@ -3,7 +3,6 @@
 /* Filters */
 var vmaFilterModule = angular.module('vmaFilterModule', []);
 
-
 vmaFilterModule.filter('getById', function () {
     return function (input, id) {
         var i = 0, len = input.length;
@@ -67,7 +66,6 @@ vmaFilterModule.filter('removeJoined', function () {
     }
 });
 
-
 vmaFilterModule.filter('convertToIndex', function () {//id=badgeconfig
     return function (input, id) {
         var returnArray = [];
@@ -88,13 +86,14 @@ vmaFilterModule.filter('convertToIndex', function () {//id=badgeconfig
 
 vmaFilterModule.filter('selectCores', function () { //array of what the user wants, and array have.COMPARE the two for similarities
     return function (classes, output) {
+        console.log(classes, output);
         var returnArray = [];
-        if (output == null || classes == null) {
+        if (output == null || classes == null || output.length == 0) {
             return classes;
         }
         for (var i = 0; i < classes.length; i++) {
             var added = false;
-            if (classes[i].cores != null && !added) {
+            if (classes[i].cores != null && !added && classes[i].cores.length != 0) {
                 for (var j = 0; j < classes[i].cores.length && !added; j++) {
                     for (var a = 0; a < output.length && !added; a++) {
                         if ((output[a]) == (classes[i].cores[j])) {
@@ -103,6 +102,8 @@ vmaFilterModule.filter('selectCores', function () { //array of what the user wan
                         }
                     }
                 }
+            } else if (classes[i].cores.length == 0) {
+                returnArray.push(classes[i]);
             }
         }
 

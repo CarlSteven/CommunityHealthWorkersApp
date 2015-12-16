@@ -10,7 +10,7 @@
         $('.overlay').click(function () {
             $('.row-offcanvas').removeClass('sideactive');
             $('.overlay').removeClass('sideactive');
-            $('body').removeClass('sidebar')
+            $('body').removeClass('sidebar');
             // $('.overlay').css({ 'display': "block" });
         });
         // $('#offcanvas').toggle(
@@ -40,8 +40,9 @@
         </div>
         <!-- main area -->
         <div class="col-xs-12 col-sm-9 search-content">
+            <!--{{tasks}}-->
             <div style="text-align: center">
-                Displaying {{filtered.length}} of {{tasks.length}} classes based on search query and filters.
+                Displaying {{filtered.length}} of {{ (tasks | filter: {active: 1}).length }} classes based on search query and filters.
             </div>
             <div class="list card my-item"
                  ng-repeat="task in filtered = (tasks | orderBy: 'time' | filter: query | selectCores: indexCoresInput)">
@@ -80,6 +81,4 @@
         </div>
         <!-- /.col-xs-12 main -->
     </div>
-    <!--/.row-->
-    </div><!--/.page-container-->
 </ui-view>
